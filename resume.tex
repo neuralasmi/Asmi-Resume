@@ -7,12 +7,10 @@
 \usepackage{enumitem}
 \usepackage{xcolor}
 
-% ─── Colors ──────────────────────────────────────────────────────────────────
 \definecolor{accent}{RGB}{26,115,232}
 \definecolor{dark}{RGB}{32,33,36}
 \definecolor{light}{RGB}{95,99,104}
 
-% ─── Helpers ─────────────────────────────────────────────────────────────────
 \newcommand{\github}[1]{\href{https://github.com/#1}{\texttt{github.com/#1}}}
 \newcommand{\linkedin}[1]{\href{https://linkedin.com/in/#1}{\texttt{linkedin.com/in/#1}}}
 \setlist{noitemsep, topsep=2pt, partopsep=0pt, parsep=0pt}
@@ -21,9 +19,7 @@
 
 \begin{document}
 
-% ═══════════════════════════════════════════════════════════════════════════════
 % HEADER
-% ═══════════════════════════════════════════════════════════════════════════════
 {\fontsize{22}{26}\selectfont\textbf{Asmi Yadav}}\par
 \vspace{4pt}
 {\fontsize{10}{13}\selectfont
@@ -34,18 +30,14 @@
 {\color{accent}\hrule height 1.2pt}\par
 \vspace{6pt}
 
-% ═══════════════════════════════════════════════════════════════════════════════
 % ABOUT
-% ═══════════════════════════════════════════════════════════════════════════════
 \section*{About Me}
-Fourth-year BTech student in Computer Science (IoT \& Intelligent Systems) at
-Manipal University Jaipur, graduating August 2026. Passionate about building
-production-ready ML systems. Seeking ML engineering internships to apply deep
-learning, NLP, and MLOps skills at the intersection of research and deployment.
+Fourth-year BTech in Computer Science (IoT \& Intelligent Systems) at Manipal
+University Jaipur, graduating Aug 2026. Building production-ready ML systems at
+the intersection of NLP, GenAI, and MLOps. Seeking ML engineering roles where
+model deployment and pipeline reliability are the core challenge.
 
-% ═══════════════════════════════════════════════════════════════════════════════
 % EDUCATION
-% ═══════════════════════════════════════════════════════════════════════════════
 \section*{Education}
 \textbf{Manipal University Jaipur} \hfill Aug 2022 -- Aug 2026 \\
 \textit{B.Tech Computer Science (IoT \& Intelligent Systems)} \hfill Jaipur, Rajasthan \\[6pt]
@@ -53,9 +45,7 @@ learning, NLP, and MLOps skills at the intersection of research and deployment.
 CBSE 12th Boards -- 91.3\% \hfill Mar 2021 -- Mar 2022 \\
 CBSE 10th Boards -- 82\% \hfill Mar 2019 -- Mar 2020
 
-% ═══════════════════════════════════════════════════════════════════════════════
 % EXPERIENCE
-% ═══════════════════════════════════════════════════════════════════════════════
 \section*{Experience}
 
 \textbf{FRND} -- \textit{AI Content Analyst (Intern)} \hfill Jan 2026 -- Feb 2026
@@ -63,7 +53,7 @@ CBSE 10th Boards -- 82\% \hfill Mar 2019 -- Mar 2020
   \item Analyzed large-scale conversational datasets to identify response gaps,
         repetition patterns, and model inconsistencies, improving chatbot quality.
   \item Contributed to training data refinement using Python, HuggingFace
-        Transformers, and Scikit-learn in the NLP optimization pipeline.
+        Transformers, and scikit-learn in the NLP optimization pipeline.
   \item Gained hands-on exposure to end-to-end AI model training workflows,
         applying ML knowledge to real-world production systems.
 \end{itemize}
@@ -76,110 +66,50 @@ CBSE 10th Boards -- 82\% \hfill Mar 2019 -- Mar 2020
         handling, in-app chat for price/timing negotiation.
 \end{itemize}
 
-% ═══════════════════════════════════════════════════════════════════════════════
 % TECHNICAL SKILLS
-% ═══════════════════════════════════════════════════════════════════════════════
 \section*{Technical Skills}
 \textbf{Languages:} Python, Java, C, C++, HTML/CSS, SQL \\
 \textbf{ML/AI:} Scikit-learn, HuggingFace Transformers, Pandas, NumPy,
-  Matplotlib, Seaborn, PyTorch, XGBoost \\
+  Matplotlib, Seaborn, PyTorch, XGBoost, LangChain, FAISS \\
 \textbf{Databases:} MongoDB, PyMongo, MySQL \\
-\textbf{Tools:} VS Code, Git, Postman, Jira, Weights \& Biases, MLflow, Docker, FastAPI
+\textbf{Tools:} Git, Docker, FastAPI, MLflow, Weights \& Biases, Postman
 
-% ═══════════════════════════════════════════════════════════════════════════════
 % ML PROJECTS
-% ═══════════════════════════════════════════════════════════════════════════════
-\section*{ML Projects (github.com/neuralasmi)}
+\section*{ML Projects}
 
-% ── 1 ────────────────────────────────────────────────────────────────────────
-\noindent\textbf{1. Titanic Survival Prediction}
-\hfill \github{neuralasmi/project-1-titanic-ml} \\
-\textit{Logistic Regression, Random Forest, XGBoost} --
-Full ML pipeline on Kaggle Titanic (891 passengers, 8 engineered features).
-5-fold stratified CV. Best: XGBoost -- 82.1\% accuracy, 0.868 ROC-AUC on holdout.
-Pipeline: EDA $\rightarrow$ preprocessing $\rightarrow$ feature engineering
-$\rightarrow$ GridSearchCV $\rightarrow$ evaluation.
+% ── 1: RAG ─────────────────────────────────────────────────────────────────────
+\noindent\textbf{RAG Chatbot -- Retrieval-Augmented Generation System}
+\hfill \github{neuralasmi/project-11-rag-chatbot} \\
+\textit{FastAPI, LangChain, FAISS, Ollama/Llama3, Docker, streaming API} --
+End-to-end RAG system for custom document QA. Ingests PDFs, chunks with
+LangChain, embeds via sentence-transformers, indexes in FAISS vector store.
+Streaming responses via FastAPI Server-Sent Events. Full docker-compose setup
+with Llama3 running locally via Ollama. Serves 100+ queryable documents with
+sub-second retrieval latency.
 
-% ── 2 ────────────────────────────────────────────────────────────────────────
-\noindent\textbf{2. House Price Prediction}
-\hfill \github{neuralasmi/project-2-house-prices} \\
-\textit{Ridge, Lasso, ElasticNet, PolynomialFeatures} --
-Regression on Kaggle House Prices. Log-transform target, StandardScaler,
-PolynomialFeatures (degree=2) for interaction terms. 70/15/15 split.
-Best: ElasticNet, Val RMSE $\approx$ 0.14 (log), R$^2$ $\approx$ 0.87.
-
-% ── 3 ────────────────────────────────────────────────────────────────────────
-\noindent\textbf{3. Customer Churn Prediction}
-\hfill \github{neuralasmi/project-3-churn-ml} \\
-\textit{Random Forest, Gradient Boosting, SMOTE, Imbalanced Data} --
-Imbalanced classification (10k records, $\sim$26\% churn rate).
-class\_weight='balanced' + optional SMOTE. Metrics: AUC-ROC, F1,
-confusion matrix, precision-recall curve, Youden's J threshold tuning.
-
-% ── 4 ────────────────────────────────────────────────────────────────────────
-\noindent\textbf{4. Spam Email Classifier}
-\hfill \github{neuralasmi/project-4-spam-classifier} \\
-\textit{TF-IDF, Naive Bayes, Logistic Regression, NLP} --
-NLP pipeline: lowercase, stopword removal, TF-IDF with unigrams+bigrams (1,2).
-Models: MultinomialNB and Logistic Regression.
-Evaluated on accuracy, precision, recall, F1.
-
-% ── 5 ────────────────────────────────────────────────────────────────────────
-\noindent\textbf{5. MNIST Digit Classifier}
-\hfill \github{neuralasmi/project-5-mnist-cnn} \\
-\textit{PyTorch CNN, 28$\times$28 grayscale} --
-Custom CNN from scratch: 2 conv blocks (32$\rightarrow$64 channels) + FC 3136$\rightarrow$128$\rightarrow$10.
-Auto-downloads MNIST. Checkpointing on best accuracy,
-DataLoader with num\_workers=4.
-
-% ── 6 ────────────────────────────────────────────────────────────────────────
-\noindent\textbf{6. CIFAR-10 Image Classification}
-\hfill \github{neuralasmi/project-6-cifar10-cnn} \\
-\textit{VGG-style, ResNet, Data Augmentation, WandB, CosineAnnealing} --
-VGG-style (5 conv blocks) and ResNet (residual connections) for CIFAR-10.
-Data augmentation: RandomHorizontalFlip, RandomCrop+padding, ColorJitter.
-SGD + CosineAnnealing LR + early stopping. Weights \& Biases tracking.
-Comparison runs: with vs without augmentation.
-
-% ── 7 ────────────────────────────────────────────────────────────────────────
-\noindent\textbf{7. Named Entity Recognition (BERT)}
+% ── 2: NER ─────────────────────────────────────────────────────────────────────
+\noindent\textbf{Named Entity Recognition with BERT Fine-Tuning}
 \hfill \github{neuralasmi/project-7-ner-bert} \\
 \textit{bert-base-uncased, HuggingFace, CoNLL-2003, token classification} --
-Fine-tuned bert-base-uncased on CoNLL-2003. Word-to-subword label alignment
-(-100 for special tokens). 3 epochs, batch 16, lr 5e-5.
-Entity-level F1 via seqeval. Entity types: PER, ORG, LOC, MISC.
+Fine-tuned bert-base-uncased on CoNLL-2003 for NER across 4 entity types
+(PER, ORG, LOC, MISC). Implemented word-to-subword label alignment handling
+(-100 for special tokens). Achieved entity-level F1 $\approx$ 0.91 on test set.
+Modular training loop with logging, checkpointing, and seqeval evaluation.
 
-% ── 8 ────────────────────────────────────────────────────────────────────────
-\noindent\textbf{8. Movie Recommender System}
-\hfill \github{neuralasmi/project-8-recommender} \\
-\textit{SVD, Collaborative Filtering, FastAPI, MovieLens 1M} --
-SVD matrix factorization on MovieLens 1M. Top-K personalized recommendations.
-Evaluation: RMSE and Hit Rate@K. FastAPI REST API:
-/health, /recommend/\{user\_id\}, /movie/\{movie\_id\}.
-
-% ── 9 ────────────────────────────────────────────────────────────────────────
-\noindent\textbf{9. FastAPI + Docker ML Serving}
+% ── 3: FastAPI + Docker ───────────────────────────────────────────────────────
+\noindent\textbf{FastAPI + Docker ML Model Serving}
 \hfill \github{neuralasmi/project-9-fastapi-docker} \\
-\textit{FastAPI, Docker, scikit-learn, RandomForest} --
-Containerized ML model serving. RandomForest on Iris dataset.
-Endpoints: GET /health, POST /predict. Docker (python:3.11-slim).
-Separates train\_model.py from main.py API serving.
+\textit{FastAPI, Docker, scikit-learn, RandomForest, REST API} --
+Containerized ML model serving pipeline. Trained RandomForest on Iris dataset,
+exported via joblib. Deployed behind FastAPI with GET /health and POST /predict
+endpoints. Docker image built from python:3.11-slim with multi-stage requirements
+install. Separated training pipeline from serving for clean separation of concerns.
 
-% ── 10 ───────────────────────────────────────────────────────────────────────
-\noindent\textbf{10. MLflow Pipeline Automation}
-\hfill \github{neuralasmi/project-10-mlflow-pipeline} \\
-\textit{MLflow, experiment tracking, model registry, batch inference} --
-MLflow tracking: parameters, metrics, artifacts. Random Forest vs Gradient
-Boosting comparison. Registered model workflow. CLI args: --lr, --epochs,
---model, --compare, --register, --inference.
-
-% ═══════════════════════════════════════════════════════════════════════════════
 % CERTIFICATIONS
-% ═══════════════════════════════════════════════════════════════════════════════
 \section*{Certifications}
 \begin{itemize}
   \item \textbf{Mastering Data Structures and Algorithms (C/C++)} --
-        Abdul Bari (ID: 1000056968) -- fundamental to advanced DSA with
+        Abdul Bari -- fundamental to advanced DSA with
         implementation and algorithm analysis emphasis.
   \item \textbf{AI Tools and ChatGPT Workshop} -- real-world AI tools for
         content creation, data handling, and productivity.
